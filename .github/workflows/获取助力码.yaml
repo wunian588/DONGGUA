@@ -1,32 +1,40 @@
-
-name: 获取助力码
-
-on:
-    workflow_dispatch:
-    watch:
-        types: [started]
-    repository_dispatch:
-        types: jd_get_share_code
-
-jobs:
-    build:
-        runs-on: ubuntu-latest
-        if: github.event.repository.owner.id == github.event.sender.id
-        steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js 10.x
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 10.x
-            - name: npm install
-              run: |
-                  npm install
-            - name: "运行 【获取助力码】"
-              run: |
-                  node onlyOneExecute.js
-              env:
-                  JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
-                  JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
-                  JD_USER_AGENT: ${{ github.event.client_payload.JD_USER_AGENT || secrets.JD_USER_AGENT }}
-                  PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
-                  SYNCURL: https://github.com/shuye73/MyActions/raw/main/jd_get_share_code.js
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node 
+ # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions 
+ #京东天天加速链接：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_speed.js 
+   #现在只能获取手动提交 
+ #基于 lxk0301 大佬的版本基础上做了格式划打印调整 
+   #已支持IOS双京东账号, Node.js支持N个京东账号 
+ #脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js 
+         name: AA现在只能获取手动提交助力码 
+   on: 
+ # push: 
+ # branches: 
+ # - main 
+ # schedule: 
+ # - cron: "10 0-23/3 * * *" 
+ workflow_dispatch: 
+ jobs: 
+ build: 
+ runs-on: ubuntu-latest 
+   steps: 
+ - uses: actions/checkout@v1 
+ - name: Use Node.js 10.x 
+ uses: actions/setup-node@v1 
+ with: 
+ node-version: 10.x 
+ - name: npm install 
+ run: | 
+ npm install 
+ - name: "运行 【现在只能获取手动提交助力码】" 
+ run: | 
+ node Ponysitters_Club_Season.js 
+ env: 
+ JD_COOKIE: ${{ secrets.JD_COOKIE }} 
+ SYNCURL: /The.Flash/The.Flash/jd_get_share_code.js 
+ SCKEY: ${{ secrets.SCKEY }} 
+ BARK_PUSH: ${{ secrets.BARK_PUSH }} 
+ PUSH_KEY: ${{ secrets.PUSH_KEY }} 
+ TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }} 
+ TG_USER_ID: ${{ secrets.TG_USER_ID }} 
+ EFORK: ${{ secrets.EFORK }} 
+ GITHUB: ${{ secrets.GITHUB }} 
