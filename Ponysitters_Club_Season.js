@@ -122,8 +122,8 @@ async function executeOneByOne() {
 
   {
          
-       console.log(hideme(rcontent));
-console.log(rcontent);
+       //console.log(hideme(rcontent));
+   console.log(rcontent);
      }
        
     }
@@ -156,7 +156,7 @@ else
         return;
     }
   
- console.log('SyncUrl'+SyncUrl)
+ //console.log('SyncUrl'+SyncUrl)
    
  
   
