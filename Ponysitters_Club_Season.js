@@ -156,7 +156,7 @@ else
         return;
     }
   
- //console.log('SyncUrl'+SyncUrl)
+ console.log('SyncUrl'+SyncUrl)
    
  
   
