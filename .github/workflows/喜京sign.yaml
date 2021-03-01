@@ -22,7 +22,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【crazyJoy分红】"
+            - name: "运行 【喜京sign】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
