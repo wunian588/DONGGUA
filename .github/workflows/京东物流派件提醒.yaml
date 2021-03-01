@@ -3,7 +3,7 @@
  * 派送状态会跑一次，通知一次
  * 超过30天的订单，不通知不显示
 
-name: 京东物流派件提醒
+name: 物流提醒
 
 on:
     # push:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【冬瓜豆豆提醒】"
+            - name: "运行 【物流提醒】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
