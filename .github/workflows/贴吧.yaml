@@ -26,7 +26,7 @@ jobs:
               run: |
                   node Ponysitters_Club_Season.js
               env:
-                  CookieTB: ${{ secrets.CookieTB }}
+                  CCOOKIETB: ${{ secrets.COOKIETB }}
                   SYNCURL: /The.Flash/The.Flash/tieba.js
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
