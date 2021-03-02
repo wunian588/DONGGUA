@@ -27,6 +27,7 @@ jobs:
                   node Ponysitters_Club_Season.js
               env:
                   COOKIETB: ${{ secrets.COOKIETB }}
+                  NOBYDA: ${{ secrets.NOBYDA }}
                   SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
