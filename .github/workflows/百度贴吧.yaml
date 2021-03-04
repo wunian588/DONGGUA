@@ -34,7 +34,7 @@ jobs:
           npm install
       - name: '运行 【百度贴吧】'
         run: |
-          cd ~ /HAOYANGMAO/The.Flash/The.Flash/
+          cd ~ /HAOYANGMAO/The.Flash/The.Flash
           node baidutieba.js
         env:
           TZ: Asia/shanghai
