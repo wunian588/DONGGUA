@@ -94,7 +94,6 @@ async function executeOneByOne() {
     	
     	
     }
-    for (var i = 0; i <3 ; i++) {
 
     for (var i = 0; i < CookieJDs.length; i++) {
         console.log(`正在执行第${i + 1}个任务`);
