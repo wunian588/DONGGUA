@@ -86,14 +86,7 @@ async function changeFiele(content, cookie) {
 async function executeOneByOne() {
     const content = await fs.readFileSync("./temp.js", "utf8");
 
-  let jxnci=0;
-   let jxnclen=CookieJDs.length;
-   if (process.env.SYNCURL.indexOf('jxnc.js')>0)
-    {
-    	jxnclen=2;jxnci=0;//判断惊喜农场脚本,自定义开始和结束的位置
-    	
-    	
-    }
+    for (var i = 0; i <3 ; i++) {
 
     for (var i = 0; i < CookieJDs.length; i++) {
         console.log(`正在执行第${i + 1}个任务`);
