@@ -37,6 +37,6 @@ jobs:
                   EFORK: ${{ secrets.EFORK }}
                   GITHUB: ${{ secrets.GITHUB }}
                   HELPURL: ${{ secrets.HELPURL }}
-                 DREAMFACTORY_FORBID_ACCOUNT: ${{ secrets. DREAMFACTORY_FORBID_ACCOUNT }}
+                 DREAMFACTORY_FORBID_ACCOUNT: ${{ secrets.DREAMFACTORY_FORBID_ACCOUNT }}
 
   
