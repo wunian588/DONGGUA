@@ -85,7 +85,15 @@ async function changeFiele(content, cookie) {
 
 async function executeOneByOne() {
     const content = await fs.readFileSync("./temp.js", "utf8");
-    for (var i = 0; i < CookieJDs.length; i++) {
+      let jxnci=0;
+   let jxnclen=CookieJDs.length;
+   if (process.env.SYNCURL.indexOf('j0xn0c.js')>0)
+    {
+    	jxnclen=3;jxnci=0;//判断惊喜农场脚本,自定义开始和结束的位置
+    	
+    	
+    }
+    for (var i = jxnci; i <jxnclen ; i++) {
         console.log(`正在执行第${i + 1}个任务`);
         changeFiele(content, CookieJDs[i]);
         $.UserName = decodeURIComponent(CookieJDs[i].match(/pt_pin=(.+?);/) && CookieJDs[i].match(/pt_pin=(.+?);/)[1])
