@@ -1,13 +1,15 @@
 
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-
+
 name: 京东直播
- 
 
 on:
     # push:
     #     branches:
     #         - main
     schedule:
-        - cron: "10-20/5 4 * * * "
+        - cron: "10-20/5 12 * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -21,18 +23,16 @@ jobs:
                   node-version: 10.x
             - name: npm install
               run: |
-                   npm install
+                  npm install
             - name: "运行 【京东直播】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: /The.Flash/The.Flash/jdzb.js
-                  SCKEY: ${{ secrets.SCKEY }}
+                  SYNCURL: https://github.com/ZFeng3242/JD-haoyangmao/raw/main/jd_live.js
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ secrets.TG_USER_ID }}
                   EFORK: ${{ secrets.EFORK }}
                   GITHUB: ${{ secrets.GITHUB }}
-                  HELPURL: ${{ secrets.HELPURL }}
