@@ -8,7 +8,7 @@ on:
     #     branches:
     #         - main
     schedule:
-        - cron: "10 9,12,17 * * *"
+        - cron: "0 1,10 * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -28,7 +28,7 @@ jobs:
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxnc.js
+                  SYNCURL: https://github.com/ZFeng3242/JD-haoyangmao/raw/main/jd_jxnc.js
                   JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
